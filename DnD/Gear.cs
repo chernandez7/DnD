@@ -15,34 +15,20 @@ namespace DnD
         private string _Accessory;
         private string _Jewlery;
 
-        public void Gear()
+        public Gear()
         {
-            //Initialization of empty Gear set
-            _Headgear = "";
-            _Armor = "";
-            _Shoes = "";
-            _Gloves = "";
-            _Accessory = "";
-            _Jewlery = "";
+            //Initialization of Gear set
+            _Headgear = "Iron Helmet";
+            _Armor = "Chainmail";
+            _Shoes = "Combat Boots";
+            _Gloves = "Leather Gloves";
+            _Accessory = "Silver Ring";
+            _Jewlery = "Silver Pendant";
         }
-
-        public string getHeadgear();
-        public void setHeadgear();
-        public string getArmor();
-        public void setArmor();
-        public string getShoes();
-        public void setShoes();
-        public string getGloves();
-        public void setGloves();
-        public string getAccessory();
-        public void setAccessory();
-        public string getJewlery();
-        public void setJewlery();
-
 
         public string getHeadgear()
         {
-            return _headgear;
+            return _Headgear;
         }
 
         public void setHeadgear(String headgear)
@@ -92,12 +78,17 @@ namespace DnD
 
         public string getJewlery()
         {
-            return _Jewlery
+            return _Jewlery;
         }
 
         public void setJewlery(String jewlery)
         {
-            _Jewlery = jewlery
+            _Jewlery = jewlery;
+        }
+
+        public void display()
+        {
+            Console.WriteLine("Headgear: {0}\nArmor: {1}\nShoes: {2}\nGloves: {3}\nAccessory: {4}\nJewlery: {5}", _Headgear, _Armor, _Shoes, _Gloves, _Accessory, _Jewlery);
         }
     }
 }
