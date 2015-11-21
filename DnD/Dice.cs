@@ -10,25 +10,29 @@ namespace DnD
     {
         public Dice() {}
 
-        public int roll(int die)
+        public void roll(int die)
         {
             Random rnd = new Random();
             int number =  rnd.Next(1, die +1);
-            return number;
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("{0}-sided dice result is: ", die );
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(number);
+            Console.ForegroundColor = ConsoleColor.Yellow;
         }
 
-         public int roll2(int die, int die2)
+         public void roll2(int die, int die2)
         {
-            Random rnd = new Random();
-             int number = rnd.Next(1, die+1) + rnd.Next(1,die2 +1) ;
-            return number;
+            roll(die);
+            roll(die2);
         }
 
-         public int roll3(int die, int die2, int die3)
+         public void roll3(int die, int die2, int die3)
          {
-             Random rnd = new Random();
-             int number = rnd.Next(1, die + 1) + rnd.Next(1, die2 + 1) + rnd.Next(1, die3+1);
-             return number;
+             roll(die);
+             roll(die2);
+             roll(die3);
          }
     }
 }

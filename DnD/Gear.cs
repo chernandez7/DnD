@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    class Gear
+    public class Gear
     {
         private string _Headgear;
         private string _Armor;
@@ -88,7 +88,32 @@ namespace DnD
 
         public void display()
         {
-            Console.WriteLine("Headgear: {0}\nArmor: {1}\nShoes: {2}\nGloves: {3}\nAccessory: {4}\nJewlery: {5}", _Headgear, _Armor, _Shoes, _Gloves, _Accessory, _Jewlery);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Headgear: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Headgear + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Armor: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Armor + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Shoes: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Shoes + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Gloves: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Gloves + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Accessory: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Accessory + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Jewlery: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Jewlery + "\n");
+            Console.ResetColor();
+            Console.WriteLine();
         }
     }
 }

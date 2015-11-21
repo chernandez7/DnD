@@ -41,12 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeCommand.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandMapper.cs" />
     <Compile Include="Dice.cs" />
+    <Compile Include="DiceCommand.cs" />
+    <Compile Include="DisplayCommand.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Gear.cs" />
+    <Compile Include="GearCommand.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="PlayerCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quitter.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="StatsCommand.cs" />
     <Compile Include="StatSet.cs" />
+    <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

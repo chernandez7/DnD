@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    class StatSet
+    public class StatSet
     {
         private int _STR; //STRENGTH
         private int _DEX; //DEXTERITY
@@ -94,7 +94,32 @@ namespace DnD
 
         public void display()
         {
-            Console.WriteLine("STR: {0}\tDEX: {1}\nCON: {2}\tINT: {3}\nWIS: {4}\tCHA: {5}", _STR, _DEX, _CON, _INT, _WIS, _CHA);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("STR: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_STR + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("DEX: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_DEX + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("CON: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_CON + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("INT: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_INT + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("WIS: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_WIS + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("CHA: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_CHA + "\n");
+            Console.ResetColor();
+            Console.WriteLine();
         }
     }
 }

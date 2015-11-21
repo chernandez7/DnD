@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    class Player
+    public class Player
     {
         private string _name;
         private string _class;
@@ -14,12 +14,13 @@ namespace DnD
         private int _HP;
         private int _MP;
         private int _Gold;
-        private Gear _gear = new Gear();
-        private StatSet _stats = new StatSet();
+        private Gear _gear;
+        private StatSet _stats;
 
-        public Player(String name)
+        public Player()
         {
-            this._name = name;
+            _gear = new Gear();
+            _stats = new StatSet();
 
             _stats.randomizeStats();
 
@@ -111,11 +112,40 @@ namespace DnD
 
         public void display()
         {
-            Console.WriteLine("Name: {0}\tClass: {1}\tLevel: {2}\n\nHP: {3}\tMP: {4}\tGold: {5}\n", _name, _class, _level, _HP, _MP, _Gold);
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Name: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_name + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Class: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_class + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Level: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_level + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("HP: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_HP + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("MP: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_MP + "\t");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Gold: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(_Gold + "\n");
+            Console.ResetColor();
+            Console.WriteLine();
+        }
+
+        public void displayAll()
+        {
+            display();
             _gear.display();
-            Console.WriteLine();
             _stats.display();
-            Console.WriteLine();
         }
     }
 }
