@@ -58,6 +58,11 @@ namespace DnD
                 Console.Write("' for changing a character. \n");
                 Console.Write("Type '");
                 Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("clear");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("' to clear the screen of text. \n");
+                Console.Write("Type '");
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("quit");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("' to quit. \n");

@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 /*Additions to be made:
  * add sentence to changes
  * nicer display
- * display all?
  * randomize stats following actual rules
  * classes
  * weapons!
  * gear affecting stats
  * saving and loading?
- * clear screen
  */
 
 namespace DnD
@@ -138,6 +136,11 @@ namespace DnD
             Console.Write("change");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("' for changing a character. \n");
+            Console.Write("Type '");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("clear");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("' to clear the screen of text. \n");
             Console.Write("Type '");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("quit");

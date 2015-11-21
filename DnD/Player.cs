@@ -146,6 +146,7 @@ namespace DnD
             display();
             _gear.display();
             _stats.display();
+            Console.ForegroundColor = ConsoleColor.Yellow;
         }
     }
 }

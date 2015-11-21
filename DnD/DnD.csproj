@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangeCommand.cs" />
+    <Compile Include="ClearCommand.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="CommandMapper.cs" />
     <Compile Include="Dice.cs" />
