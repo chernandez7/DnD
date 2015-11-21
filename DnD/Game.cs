@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 
 /*Additions to be made:
- * add sentence to changes
- * nicer display
+ * nicer display //http://www.csharp-examples.net/align-string-with-spaces/
+ * saving and loading? //Store players info into text file and read back in later?
+ * 
+ * //need game rules for these
  * randomize stats following actual rules
  * classes
  * weapons!
  * gear affecting stats
- * saving and loading?
+ * battle system
  */
 
 namespace DnD

@@ -94,30 +94,33 @@ namespace DnD
 
         public void display()
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("STR: ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_STR + "\t");
+            Console.WriteLine("--------------------------------------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("DEX: ");
+            Console.Write(String.Format("{0,-12}", "STR: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_DEX + "\n");
+            Console.Write(String.Format("{0,-12}", _STR));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("CON: ");
+            Console.Write(String.Format("{0,-12}", "DEX: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_CON + "\t");
+            Console.Write(String.Format("{0,-12}", _DEX));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("INT: ");
+            Console.Write(String.Format("{0,-12}", "CON: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_INT + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _CON));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("WIS: ");
+            Console.Write(String.Format("{0,-12}", "INT: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_WIS + "\t");
+            Console.Write(String.Format("{0,-12}", _INT));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("CHA: ");
+            Console.Write(String.Format("{0,-12}", "WIS: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_CHA + "\n");
+            Console.Write(String.Format("{0,-12}", _WIS));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "CHA: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _CHA));
+            Console.WriteLine("--------------------------------------------------------------");
             Console.ResetColor();
             Console.WriteLine();
         }

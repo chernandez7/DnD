@@ -88,30 +88,33 @@ namespace DnD
 
         public void display()
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Headgear: ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Headgear + "\n");
+            Console.WriteLine("--------------------------------------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Armor: ");
+            Console.Write(String.Format("{0,-12}", "Headgear: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Armor + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _Headgear ));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Shoes: ");
+            Console.Write(String.Format("{0,-12}", "Armor: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Shoes + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _Armor));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Gloves: ");
+            Console.Write(String.Format("{0,-12}", "Shoes: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Gloves + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _Shoes));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Accessory: ");
+            Console.Write(String.Format("{0,-12}", "Gloves: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Accessory + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _Gloves));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Jewlery: ");
+            Console.Write(String.Format("{0,-12}", "Accessory: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Jewlery + "\n");
+            Console.WriteLine(String.Format("{0,-12}", _Accessory));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "Jewlery: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _Jewlery));
+            Console.WriteLine("--------------------------------------------------------------");
             Console.ResetColor();
             Console.WriteLine();
         }

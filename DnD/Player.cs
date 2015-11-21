@@ -112,31 +112,34 @@ namespace DnD
 
         public void display()
         {
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Name: ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_name + "\t");
+            Console.WriteLine("--------------------------------------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Class: ");
+            Console.Write(String.Format("{0,-12}", "Name: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_class + "\t");
+            Console.Write(String.Format( "{0,-12}", _name));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Level: ");
+            Console.Write(String.Format("{0,-12}", "Class: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_level + "\n");
+            Console.Write(String.Format("{0,-12}", _class));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("HP: ");
+            Console.Write(String.Format("{0,-12}","Level: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_HP + "\t");
+            Console.WriteLine(String.Format("{0,-12}", _level));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("MP: ");
+            Console.Write(String.Format("{0,-12}", "HP: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_MP + "\t");
+            Console.Write(String.Format("{0,-12}", _HP));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Gold: ");
+            Console.Write(String.Format("{0,-12}", "MP: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(_Gold + "\n");
+            Console.Write(String.Format("{0,-12}", _MP));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "Gold: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _Gold));
+            Console.WriteLine("--------------------------------------------------------------");
+
             Console.ResetColor();
             Console.WriteLine();
         }
@@ -144,8 +147,8 @@ namespace DnD
         public void displayAll()
         {
             display();
-            _gear.display();
             _stats.display();
+            _gear.display();
             Console.ForegroundColor = ConsoleColor.Yellow;
         }
     }

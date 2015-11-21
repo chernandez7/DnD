@@ -43,8 +43,8 @@ namespace DnD
 
                     if (response == "stats")
                     {
-                        string response2 = UI.PromptLine(" STR DEX CON INT WIS CHA ?");
-                        int amount = UI.PromptInt("How much would you like to change " + response2 + " by?");
+                        string response2 = UI.PromptLine(" STR DEX CON INT WIS CHA ?\n");
+                        int amount = UI.PromptInt("How much would you like to change " + response2 + " by?\n");
                         //STRENGTH
                         if (response2 == "STR")
                         {
