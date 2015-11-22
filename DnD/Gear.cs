@@ -18,12 +18,12 @@ namespace DnD
         public Gear()
         {
             //Initialization of Gear set
-            _Headgear = "Iron Helmet";
-            _Armor = "Chainmail";
-            _Shoes = "Combat Boots";
-            _Gloves = "Leather Gloves";
-            _Accessory = "Silver Ring";
-            _Jewlery = "Silver Pendant";
+            _Headgear = "NONE";
+            _Armor = "NONE";
+            _Shoes = "NONE";
+            _Gloves = "NONE";
+            _Accessory = "NONE";
+            _Jewlery = "NONE";
         }
 
         public string getHeadgear()
