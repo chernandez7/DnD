@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 
 /*Additions to be made:
- * nicer display //http://www.csharp-examples.net/align-string-with-spaces/
  * saving and loading? //Store players info into text file and read back in later?
  * 
  * //need game rules for these
@@ -143,6 +142,11 @@ namespace DnD
             Console.Write("clear");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("' to clear the screen of text. \n");
+            Console.Write("Type '");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("save");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("' to save the information of the characters. \n");
             Console.Write("Type '");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("quit");

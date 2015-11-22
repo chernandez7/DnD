@@ -57,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quitter.cs" />
     <Compile Include="Response.cs" />
+    <Compile Include="SaveCommand.cs" />
     <Compile Include="StatsCommand.cs" />
     <Compile Include="StatSet.cs" />
     <Compile Include="UI.cs" />
