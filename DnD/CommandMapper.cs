@@ -27,7 +27,8 @@ namespace DnD
             new DisplayCommand(game),
             new ChangeCommand(game),
             new ClearCommand(),
-            new SaveCommand(game)
+            new SaveCommand(game),
+            new ResetCommand()
 
          };
          AllCommands = "";

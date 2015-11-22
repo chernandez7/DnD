@@ -40,7 +40,7 @@ namespace DnD
 
             foreach (Player p in _game.getPlayerArr())
             {
-                writer.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\t{10}\t{11}\t{12}\t{13}\t{14}\t{15}\t{16}\t{17}", 
+                writer.WriteLine("{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-{15}-{16}-{17}", 
                     p.getName(), p.getClass(), p.getLevel(), p.getHP(), p.getMP(), p.getGold(),
                     p.getGear().getHeadgear(), p.getGear().getArmor(), p.getGear().getShoes(), p.getGear().getGloves(), p.getGear().getAccessory(), p.getGear().getJewlery(),
                     p.getStats().getSTR(), p.getStats().getDEX(), p.getStats().getCON(), p.getStats().getINT(), p.getStats().getWIS(), p.getStats().getCHA());

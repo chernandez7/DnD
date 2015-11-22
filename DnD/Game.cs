@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,6 @@ using System.Threading.Tasks;
 
 
 /*Additions to be made:
- * saving and loading? //Store players info into text file and read back in later?
  * 
  * //need game rules for these
  * randomize stats following actual rules
@@ -54,21 +54,48 @@ namespace DnD
 
         public Player[] gameInit()
         {
-           int playerCount = UI.PromptInt("How many adventurers are playing?\n");
-            Player[] Arr = new Player[playerCount];
+            Player[] Arr;
 
-            Console.WriteLine();
-
-            for (int i = 0; i < playerCount; i++)
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            bool loadStatus = UI.Agree("Would you like to load a previous save file?");
+            
+            if (loadStatus)
             {
-                Player p = new Player();
-                p.setName(UI.PromptLine("What is player " + (i + 1) + "s name?\n"));
-                p.setClass(UI.PromptLine("What is player " + (i + 1) + "s class?\n"));
+                //http://stackoverflow.com/questions/14877237/getting-all-file-names-from-a-folder-using-c-sharp
+                string[] fileArray = Directory.GetFiles(@"C:\Users\Chris\repos\DnD\DnD\bin\Debug\", "*.txt", SearchOption.AllDirectories);
+
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                foreach (String s in fileArray)
+                {
+                    string temp = s.Substring(s.IndexOf("g") + 2);
+                    string r = temp.Replace(".txt", "");
+                    Console.Write(String.Format("{0,-15}", r));
+                }
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                string fileName = UI.PromptLine("What game would you like to load?");
+
+                Arr = Loader.loadGame(fileName + ".txt");
+            }
+            else 
+            {
+                int playerCount = UI.PromptInt("How many adventurers are playing?\n");
+                Arr = new Player[playerCount];
+
                 Console.WriteLine();
 
-                Arr[i] = p;
-            }
+                for (int i = 0; i < playerCount; i++)
+                {
+                    Player p = new Player();
+                    p.setName(UI.PromptLine("What is player " + (i + 1) + "s name?\n"));
+                    p.setClass(UI.PromptLine("What is player " + (i + 1) + "s class?\n"));
+                    Console.WriteLine();
 
+                    Arr[i] = p;
+                }
+            }
+         
             printWelcome();
 
             Console.WriteLine();
@@ -147,6 +174,11 @@ namespace DnD
             Console.Write("save");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("' to save the information of the characters. \n");
+            Console.Write("Type '");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("reset");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("' to reset the game. \n");
             Console.Write("Type '");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("quit");

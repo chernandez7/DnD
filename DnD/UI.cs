@@ -11,7 +11,7 @@ namespace DnD
         /// After displaying the prompt, return a line from the keyboard.
         public static string PromptLine(string prompt)
         {
-            Console.Write(prompt);
+            Console.WriteLine(prompt);
             return Console.ReadLine();
         }
 

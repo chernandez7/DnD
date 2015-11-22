@@ -1,3 +1,0 @@
-chris	paladin	1	100	100	50	Iron Helmet	Chainmail	Combat Boots	Leather Gloves	Silver Ring	Silver Pendant	24	15	30	1	16	28
-brian	theif	1	100	100	50	Iron Helmet	Chainmail	Combat Boots	Leather Gloves	Silver Ring	Silver Pendant	15	30	14	17	6	12
-yousef	magus	1	100	100	50	Iron Helmet	Chainmail	Combat Boots	Leather Gloves	Silver Ring	Silver Pendant	3	7	1	15	23	10

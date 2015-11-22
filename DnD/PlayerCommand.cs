@@ -27,7 +27,11 @@ namespace DnD
             if (!command.hasSecondWord())
             {
                 // if there is no second word
-                Console.WriteLine("info for who?");
+                foreach (Player p in _game.getPlayerArr())
+                {
+                    Console.Write(String.Format("{0,-10}", p.getName()));
+                }
+                Console.WriteLine();
                 return false;
             }
             string charName = command.SecondWord;

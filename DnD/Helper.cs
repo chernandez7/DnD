@@ -63,9 +63,14 @@ namespace DnD
                 Console.Write("' to clear the screen of text. \n");
                 Console.Write("Type '");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write("clear");
+                Console.Write("save");
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("' to clear the screen of text. \n");
+                Console.Write("' to save characters data in a file. \n");
+                Console.Write("Type '");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("reset");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("' to reset the game. \n");
                 Console.Write("Type '");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("quit");
