@@ -23,7 +23,7 @@ namespace DnD
         public bool Execute(Command command)
         {
             Console.Clear();
-            Game game = new Game();
+            Game game = new Game(); //creates and plays new game
             game.play();
 
 

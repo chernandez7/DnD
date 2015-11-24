@@ -40,7 +40,7 @@ namespace DnD
             {
                 if (p.getName() == charName)
                 {
-                    p.displayAll();
+                    p.displayAll(); //displays all info of a player
                 }
             }
 

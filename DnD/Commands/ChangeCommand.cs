@@ -34,7 +34,7 @@ namespace DnD
 
             foreach (Player p in _game.getPlayerArr())
             {
-                if (p.getName() == charName)
+                if (p.getName() == charName) //matches player
                 {
                     Console.WriteLine("What would you like to change for " + p.getName() + "?\n");
                     string response = UI.PromptLine("stats, gear, or player\n");
@@ -186,7 +186,6 @@ namespace DnD
                     Console.ForegroundColor = ConsoleColor.Yellow;
                 }
             }
-
             return false;
         }
     }

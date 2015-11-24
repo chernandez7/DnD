@@ -38,14 +38,13 @@ namespace DnD
 
             var startTime = DateTime.Now;
 
-            foreach (Player p in _game.getPlayerArr())
+            foreach (Player p in _game.getPlayerArr()) //writes info in plain text for each character
             {
                 writer.WriteLine("{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-{15}-{16}-{17}", 
                     p.getName(), p.getClass(), p.getLevel(), p.getHP(), p.getMP(), p.getGold(),
                     p.getGear().getHeadgear(), p.getGear().getArmor(), p.getGear().getShoes(), p.getGear().getGloves(), p.getGear().getAccessory(), p.getGear().getJewlery(),
                     p.getStats().getSTR(), p.getStats().getDEX(), p.getStats().getCON(), p.getStats().getINT(), p.getStats().getWIS(), p.getStats().getCHA());
             }
-
 
             var totalSeconds = (DateTime.Now - startTime).TotalSeconds;
             Console.WriteLine("Character data saved in {0} seconds as {1}.", totalSeconds, fileName);

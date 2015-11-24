@@ -19,17 +19,17 @@ namespace DnD
 
         public Player()
         {
+            //initialization of player and it's objects
             _gear = new Gear();
             _stats = new StatSet();
-
-            _stats.randomizeStats();
-
+            _stats.randomizeStats(); //for now stats are just temporary
             _level = 1;
             _HP = 100;
             _MP = 100;
             _Gold = 50;
         }
 
+        //accessors and mutators
         public void setName(string name)
         {
             _name = name;
@@ -41,9 +41,9 @@ namespace DnD
         }
 
         public void setClass(string c)
-    {
+        {
         _class = c;
-    }
+        }
 
         public string getClass()
         {
@@ -110,7 +110,7 @@ namespace DnD
             return _stats;
         }
 
-        public void display()
+        public void display() //ToString for player's basic info
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("--------------------------------------------------------------");
@@ -144,7 +144,7 @@ namespace DnD
             Console.WriteLine();
         }
 
-        public void displayAll()
+        public void displayAll() //Tostring for player info, gear, and stats together
         {
             display();
             _stats.display();

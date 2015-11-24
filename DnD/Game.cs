@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 /*Additions to be made:
  * 
- * Refactor dice to have variable amount of dice/rolls
- * 
  * //need game rules for these
  * randomize stats following actual rules
  * classes
@@ -61,14 +59,14 @@ namespace DnD
             Console.ForegroundColor = ConsoleColor.Yellow;
             bool loadStatus = UI.Agree("Would you like to load a previous save file?");
             
-            if (loadStatus)
+            if (loadStatus) //if user wants to load then give options and load chosen one
             {
                 //http://stackoverflow.com/questions/14877237/getting-all-file-names-from-a-folder-using-c-sharp
                 string[] fileArray = Directory.GetFiles(@"C:\Users\Chris\repos\DnD\DnD\bin\Debug\", "*.txt", SearchOption.AllDirectories);
 
                 Console.ForegroundColor = ConsoleColor.Red;
 
-                foreach (String s in fileArray)
+                foreach (String s in fileArray) //parses and prints out all text files already in project
                 {
                     string temp = s.Substring(s.IndexOf("g") + 2);
                     string r = temp.Replace(".txt", "");
@@ -79,22 +77,25 @@ namespace DnD
                 string fileName = UI.PromptLine("What game would you like to load?\n");
 
 
-                while (!File.Exists(@"C:\Users\Chris\repos\DnD\DnD\bin\Debug\" + fileName + ".txt"))
+                while (!File.Exists(@"C:\Users\Chris\repos\DnD\DnD\bin\Debug\" + fileName + ".txt")) //if file doesn't exist in case of typo
                 {
 
                        if (fileName == "") { fileName = UI.PromptLine("No file chosen. What game would you like to load?\n");  }
 
-                       if  (fileName == "q") { Environment.Exit(-1); }
-
+                       if  (fileName == "q") //option to quit to not get stuck in menu
+                       {
+                           bool quitStatus = UI.Agree("Are you sure that you want to quit?");
+                           if (quitStatus) { Environment.Exit(-1); }
+                           else { fileName = UI.PromptLine("What game would you like to load?\n"); }
+                       }
                         Console.WriteLine("File: " + fileName + ".txt does not exist. Please enter a valid file name, start a new game, or type 'q' to quit.\n");
                         fileName = UI.PromptLine("What game would you like to load?\n");
-
                 }
 
-                //if here then ok to load file
+                //if here then ok to load file and exists
                 Arr = Loader.loadGame(fileName + ".txt");
             }
-            else 
+            else //if user chose to make a new instance of game
             {
                 int playerCount = UI.PromptInt("How many adventurers are playing?\n");
                 Arr = new Player[playerCount];
@@ -141,6 +142,8 @@ namespace DnD
                                    `\ /'
 				     `  
            ");
+
+            //Printing out commands
             Console.WriteLine();
             Console.WriteLine("Welcome to Dungeons & Dragons!");
             Console.ForegroundColor = ConsoleColor.Yellow;

@@ -8,12 +8,12 @@ namespace DnD
 {
     public class StatSet
     {
-        private int _STR; //STRENGTH
-        private int _DEX; //DEXTERITY
-        private int _CON; //CONSTITUTION
+        private int _STR; // STRENGTH
+        private int _DEX; // DEXTERITY
+        private int _CON; // CONSTITUTION
         private int _INT; // INTELLIGENCE
-        private int _WIS; //WISDOM
-        private int _CHA; //CHARISMA
+        private int _WIS; // WISDOM
+        private int _CHA; // CHARISMA
     
         public StatSet()
         {
@@ -26,7 +26,7 @@ namespace DnD
             _CHA = 0;
         }
 
-        public void randomizeStats()
+        public void randomizeStats() //temporary, generates number from 1-30
         {
             Random rand = new Random();
             _STR = rand.Next(1, 31);
@@ -37,62 +37,68 @@ namespace DnD
             _CHA = rand.Next(1, 31);
         }
     
-    public void setSTR(int str)
-    {
+        //accessors and mutators
+        public void setSTR(int str)
+        {
         _STR = str;
-    }
+        }
 
         public int getSTR()
         {
             return _STR;
         }
-            public void setDEX(int dex)
-    {
+        
+        public void setDEX(int dex)
+        {
         _DEX = dex;
-    }
+        }
 
         public int getDEX()
         {
             return _DEX;
         }
-    public void setCON(int con)
-    {
+
+        public void setCON(int con)
+        {
         _CON = con;
-    }
+        }
 
         public int getCON()
         {
             return _CON;
         }
-    public void setINT(int i)
-    {
+
+        public void setINT(int i)
+        {
         _INT = i;
-    }
+        }
 
         public int getINT()
         {
             return _INT;
         }
-    public void setWIS(int wis)
-    {
+
+        public void setWIS(int wis)
+        {
         _WIS = wis;
-    }
+        }
 
         public int getWIS()
         {
             return _WIS;
         }
-    public void setCHA(int cha)
-    {
+
+        public void setCHA(int cha)
+        {
         _CHA = cha;
-    }
+        }
 
         public int getCHA()
         {
             return _CHA;
         }
 
-        public void display()
+        public void display() //ToString for stat set
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("--------------------------------------------------------------");

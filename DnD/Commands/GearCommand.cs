@@ -36,7 +36,7 @@ namespace DnD
             {
                 if (p.getName() == charName)
                 {
-                    p.getGear().display();
+                    p.getGear().display(); //prints out gear of specific player
                 }
             }
 

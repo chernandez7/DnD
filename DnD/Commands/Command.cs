@@ -15,14 +15,14 @@ namespace DnD
         {
             string cmd;
             string parameter = null;
-            string line = UI.PromptLine("> ").Trim();
+            string line = UI.PromptLine("> ").Trim(); //compies command line input >
 
             int i = line.IndexOf(" ");
             if (i == -1)
             {
                 cmd = line;
             }
-            else
+            else //parses out command
             {
                 cmd = line.Substring(0, i);
                 parameter = line.Substring(i).Trim();

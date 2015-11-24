@@ -36,7 +36,7 @@ namespace DnD
             {
                 if (p.getName() == charName)
                 {
-                    p.getStats().display();
+                    p.getStats().display(); //print out stats of player
                 }
             }
 

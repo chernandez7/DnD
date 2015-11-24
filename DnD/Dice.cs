@@ -13,7 +13,7 @@ namespace DnD
         public void roll(int die)
         {
             Random rnd = new Random();
-            int number =  rnd.Next(1, die +1);
+            int number =  rnd.Next(1, die +1); //generates random number from 1 to # of sides of die
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("{0}-sided dice result is: ", die );
@@ -21,18 +21,5 @@ namespace DnD
             Console.WriteLine(number);
             Console.ForegroundColor = ConsoleColor.Yellow;
         }
-
-         public void roll2(int die, int die2)
-        {
-            roll(die);
-            roll(die2);
-        }
-
-         public void roll3(int die, int die2, int die3)
-         {
-             roll(die);
-             roll(die2);
-             roll(die3);
-         }
     }
 }

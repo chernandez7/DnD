@@ -27,29 +27,14 @@ namespace DnD
             //string charName = command.SecondWord;
             int diceNumber = int.Parse(UI.PromptLine("How many dice do you want to roll?\n"));
 
-            if (diceNumber == 1)
+            if (diceNumber > 3) { Console.WriteLine("Why do you want to roll so many?\n"); }
+
+            for (int i = 0; i < diceNumber; i++)
             {
-                int die = int.Parse(UI.PromptLine("How many sides for the die\n?"));
+                int die = int.Parse(UI.PromptLine("How many sides for the die?\n"));
                 _dice.roll(die);
+                Console.WriteLine();
             }
-
-            if (diceNumber == 2)
-            {
-                int die = int.Parse(UI.PromptLine("How many sides for the first die?\n"));
-                int die2 = int.Parse(UI.PromptLine("How many sides for the second die?\n"));
-                _dice.roll2(die, die2);
-            }
-
-            if (diceNumber == 3)
-            {
-                int die = int.Parse(UI.PromptLine("How many sides for the first die?\n"));
-                int die2 = int.Parse(UI.PromptLine("How many sides for the second die?\n"));
-                int die3 = int.Parse(UI.PromptLine("How many sides for the third die?\n"));
-                _dice.roll3(die, die2, die3);
-            }
-
-            if (diceNumber > 3) { Console.WriteLine("Why do you want to roll so many?\n");  }
-
             return false;
         }
     }

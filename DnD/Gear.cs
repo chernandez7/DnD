@@ -26,6 +26,7 @@ namespace DnD
             _Jewlery = "NONE";
         }
 
+        //accessors and mutators
         public string getHeadgear()
         {
             return _Headgear;
@@ -86,7 +87,7 @@ namespace DnD
             _Jewlery = jewlery;
         }
 
-        public void display()
+        public void display() //ToString of gear set
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("--------------------------------------------------------------");
