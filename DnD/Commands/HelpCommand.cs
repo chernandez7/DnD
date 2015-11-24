@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DnD
 {
     /// Help Response
-    public class Helper : Response
+    public class HelpCommand : Response
     {
         public string CommandName { get; private set; }
         private CommandMapper _commandMapper;
@@ -99,7 +99,7 @@ for help on the command.";
         }
 
         /// Constructor for objects of class Helper
-        public Helper(Dictionary<string, Response> responses,
+        public HelpCommand(Dictionary<string, Response> responses,
                       CommandMapper commandMapper)
         {
             this._responses = responses;

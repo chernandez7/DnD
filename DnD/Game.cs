@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 
 /*Additions to be made:
+ * 
+ * Refactor dice to have variable amount of dice/rolls
+ * 
  * //need game rules for these
  * randomize stats following actual rules
  * classes

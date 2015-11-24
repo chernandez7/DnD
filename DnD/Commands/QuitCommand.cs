@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace DnD
 {
         /// Quit Response 
-   public class Quitter : Response
+   public class QuitCommand : Response
    {
       public string CommandName {get; private set;}
 
-      public Quitter()
+      public QuitCommand()
       {
          CommandName = "quit";
       }

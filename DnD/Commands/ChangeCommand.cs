@@ -14,7 +14,7 @@ namespace DnD
         public ChangeCommand(Game game)
         {
             CommandName = "change";
-                this._game = game;
+            this._game = game;
         }
 
         public string Help()
@@ -48,7 +48,7 @@ namespace DnD
                         //STRENGTH
                         if (response2 == "STR")
                         {
-                            p.getStats().setSTR( p.getStats().getSTR() + amount);
+                            p.getStats().setSTR(p.getStats().getSTR() + amount);
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("{0} has been changed to {1}", response2, p.getStats().getSTR());
 

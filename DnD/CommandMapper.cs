@@ -18,8 +18,8 @@ namespace DnD
          _responses = new Dictionary<string, Response>();
          Response[] resp = {
 
-            new Quitter(),
-            new Helper(_responses, this),
+            new QuitCommand(),
+            new HelpCommand(_responses, this),
 			new StatsCommand (game),
 			new GearCommand (game),
              new PlayerCommand (game),
