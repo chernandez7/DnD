@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 
 /*Additions to be made:
- * 
  * //need game rules for these
  * randomize stats following actual rules
  * classes
@@ -74,8 +73,22 @@ namespace DnD
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                string fileName = UI.PromptLine("What game would you like to load?");
+                string fileName = UI.PromptLine("What game would you like to load?\n");
 
+
+                while (!File.Exists(@"C:\Users\Chris\repos\DnD\DnD\bin\Debug\" + fileName + ".txt"))
+                {
+
+                       if (fileName == "") { fileName = UI.PromptLine("No file chosen. What game would you like to load?\n");  }
+
+                       if  (fileName == "q") { Environment.Exit(-1); }
+
+                        Console.WriteLine("File: " + fileName + ".txt does not exist. Please enter a valid file name, start a new game, or type 'q' to quit.\n");
+                        fileName = UI.PromptLine("What game would you like to load?\n");
+
+                }
+
+                //if here then ok to load file
                 Arr = Loader.loadGame(fileName + ".txt");
             }
             else 
