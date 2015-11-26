@@ -14,6 +14,9 @@ namespace DnD
         private string _Gloves;
         private string _Accessory;
         private string _Jewlery;
+        private string _Weapon1;
+        private string _Weapon2;
+        private string _Shield;
 
         public Gear()
         {
@@ -24,6 +27,9 @@ namespace DnD
             _Gloves = "NONE";
             _Accessory = "NONE";
             _Jewlery = "NONE";
+            _Weapon1 = "NONE";
+            _Weapon2 = "NONE";
+            _Shield = "NONE";
         }
 
         //accessors and mutators
@@ -87,6 +93,36 @@ namespace DnD
             _Jewlery = jewlery;
         }
 
+        public string getWeapon1()
+        {
+            return _Weapon1;
+        }
+
+        public void setWeapon1(String weapon)
+        {
+            _Weapon1 = weapon;
+        }
+
+        public string getWeapon2()
+        {
+            return _Weapon2;
+        }
+
+        public void setWeapon2(String weapon)
+        {
+            _Weapon2 = weapon;
+        }
+
+        public string getShield()
+        {
+            return _Shield;
+        }
+
+        public void setShield(String shield)
+        {
+            _Shield = shield;
+        }
+
         public void display() //ToString of gear set
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -115,6 +151,18 @@ namespace DnD
             Console.Write(String.Format("{0,-12}", "Jewlery: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(String.Format("{0,-12}", _Jewlery));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "Weapon 1: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _Weapon1));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "Weapon 2: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _Weapon2));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(String.Format("{0,-12}", "Shield: "));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(String.Format("{0,-12}", _Shield));
             Console.WriteLine("--------------------------------------------------------------");
             Console.ResetColor();
             Console.WriteLine();

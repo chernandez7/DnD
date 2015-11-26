@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 /*Additions to be made:
  * 
- * //need game rules for these
+ * Implement classes
  * randomize stats following actual rules
- * classes
  * weapons!
- * gear affecting stats
  * battle system
  */
 

@@ -60,13 +60,17 @@ namespace DnD
                 arr[i].getGear().setGloves(dataArr[9]); //gloves
                 arr[i].getGear().setAccessory(dataArr[10]); //accessory
                 arr[i].getGear().setJewlery(dataArr[11]); //jewlery
+                arr[i].getGear().setWeapon1(dataArr[12]); //Weapon1
+                arr[i].getGear().setWeapon2(dataArr[13]); //Weapon2
+                arr[i].getGear().setShield(dataArr[14]); //Shield
 
-                arr[i].getStats().setSTR(int.Parse(dataArr[12])); //STR
-                arr[i].getStats().setDEX(int.Parse(dataArr[13])); //DEX
-                arr[i].getStats().setCON(int.Parse(dataArr[14])); //CON
-                arr[i].getStats().setINT(int.Parse(dataArr[15])); //INT
-                arr[i].getStats().setWIS(int.Parse(dataArr[16])); //WIS
-                arr[i].getStats().setCHA(int.Parse(dataArr[17])); //CHA
+
+                arr[i].getStats().setSTR(int.Parse(dataArr[15])); //STR
+                arr[i].getStats().setDEX(int.Parse(dataArr[16])); //DEX
+                arr[i].getStats().setCON(int.Parse(dataArr[17])); //CON
+                arr[i].getStats().setINT(int.Parse(dataArr[18])); //INT
+                arr[i].getStats().setWIS(int.Parse(dataArr[19])); //WIS
+                arr[i].getStats().setCHA(int.Parse(dataArr[20])); //CHA
 
                 i++;
             }

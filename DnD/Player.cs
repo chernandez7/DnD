@@ -17,6 +17,22 @@ namespace DnD
         private Gear _gear;
         private StatSet _stats;
 
+        /*
+         * Cleric
+         * Fighter
+         * Rogue
+         * Wizard
+         * Barbarian
+         * Bard
+         * Druid
+         * Monk
+         * Paladin
+         * Ranger
+         * Sorcerer
+         * Warlock
+         */ 
+
+
         public Player()
         {
             //initialization of player and it's objects

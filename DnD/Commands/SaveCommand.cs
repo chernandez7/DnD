@@ -40,9 +40,9 @@ namespace DnD
 
             foreach (Player p in _game.getPlayerArr()) //writes info in plain text for each character
             {
-                writer.WriteLine("{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-{15}-{16}-{17}", 
+                writer.WriteLine("{0}-{1}-{2}-{3}-{4}-{5}-{6}-{7}-{8}-{9}-{10}-{11}-{12}-{13}-{14}-{15}-{16}-{17}-{18}-{19}-{20}", 
                     p.getName(), p.getClass(), p.getLevel(), p.getHP(), p.getMP(), p.getGold(),
-                    p.getGear().getHeadgear(), p.getGear().getArmor(), p.getGear().getShoes(), p.getGear().getGloves(), p.getGear().getAccessory(), p.getGear().getJewlery(),
+                    p.getGear().getHeadgear(), p.getGear().getArmor(), p.getGear().getShoes(), p.getGear().getGloves(), p.getGear().getAccessory(), p.getGear().getJewlery(), p.getGear().getWeapon1(), p.getGear().getWeapon2(), p.getGear().getShield(),
                     p.getStats().getSTR(), p.getStats().getDEX(), p.getStats().getCON(), p.getStats().getINT(), p.getStats().getWIS(), p.getStats().getCHA());
             }
 
