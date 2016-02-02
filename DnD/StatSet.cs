@@ -40,7 +40,7 @@ namespace DnD
         //accessors and mutators
         public void setSTR(int str)
         {
-        _STR = str;
+            _STR = str;
         }
 
         public int getSTR()
@@ -50,7 +50,7 @@ namespace DnD
         
         public void setDEX(int dex)
         {
-        _DEX = dex;
+        _   DEX = dex;
         }
 
         public int getDEX()
@@ -60,7 +60,7 @@ namespace DnD
 
         public void setCON(int con)
         {
-        _CON = con;
+            _CON = con;
         }
 
         public int getCON()
@@ -70,7 +70,7 @@ namespace DnD
 
         public void setINT(int i)
         {
-        _INT = i;
+            _INT = i;
         }
 
         public int getINT()
@@ -80,7 +80,7 @@ namespace DnD
 
         public void setWIS(int wis)
         {
-        _WIS = wis;
+            _WIS = wis;
         }
 
         public int getWIS()
@@ -90,7 +90,7 @@ namespace DnD
 
         public void setCHA(int cha)
         {
-        _CHA = cha;
+            _CHA = cha;
         }
 
         public int getCHA()
