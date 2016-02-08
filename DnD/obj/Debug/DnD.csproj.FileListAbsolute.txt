@@ -4,3 +4,6 @@ C:\Users\Chris\repos\DnD\DnD\bin\Debug\DnD.pdb
 C:\Users\Chris\repos\DnD\DnD\obj\Debug\DnD.exe
 C:\Users\Chris\repos\DnD\DnD\obj\Debug\DnD.pdb
 C:\Users\Chris\repos\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+C:\Users\chris\Repositories\DnD\DnD\bin\Debug\DnD.exe.config
+C:\Users\chris\Repositories\DnD\DnD\obj\Debug\DnD.exe
+C:\Users\chris\Repositories\DnD\DnD\obj\Debug\DnD.pdb
