@@ -14,9 +14,9 @@ namespace DnD
         private string _Gloves;
         private string _Accessory;
         private string _Jewlery;
-        private string _Weapon1;
-        private string _Weapon2;
-        private string _Shield;
+        private string _LeftHand;
+        private string _RightHand;
+        private string _Etc;
 
         public Gear()
         {
@@ -27,9 +27,9 @@ namespace DnD
             _Gloves = "NONE";
             _Accessory = "NONE";
             _Jewlery = "NONE";
-            _Weapon1 = "NONE";
-            _Weapon2 = "NONE";
-            _Shield = "NONE";
+            _LeftHand = "NONE";
+            _RightHand = "NONE";
+            _Etc = "NONE";
         }
 
         //accessors and mutators
@@ -95,32 +95,37 @@ namespace DnD
 
         public string getWeapon1()
         {
-            return _Weapon1;
+            return _LeftHand;
         }
 
-        public void setWeapon1(String weapon)
+        public void setLeftHand(String weapon)
         {
-            _Weapon1 = weapon;
+            _LeftHand = weapon;
         }
 
-        public string getWeapon2()
+        public string getLeftHand()
         {
-            return _Weapon2;
+            return _LeftHand;
         }
 
-        public void setWeapon2(String weapon)
+        public string getRightHand()
         {
-            _Weapon2 = weapon;
+            return _RightHand;
         }
 
-        public string getShield()
+        public void setRightHand(String weapon)
         {
-            return _Shield;
+            _RightHand = weapon;
         }
 
-        public void setShield(String shield)
+        public string getEtc()
         {
-            _Shield = shield;
+            return _Etc;
+        }
+
+        public void setEtc(String shield)
+        {
+            _Etc = shield;
         }
 
         public void display() //ToString of gear set
@@ -152,17 +157,17 @@ namespace DnD
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(String.Format("{0,-12}", _Jewlery));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(String.Format("{0,-12}", "Weapon 1: "));
+            Console.Write(String.Format("{0,-12}", "Left Hand: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(String.Format("{0,-12}", _Weapon1));
+            Console.WriteLine(String.Format("{0,-12}", _LeftHand));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(String.Format("{0,-12}", "Weapon 2: "));
+            Console.Write(String.Format("{0,-12}", "Right Hand: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(String.Format("{0,-12}", _Weapon2));
+            Console.WriteLine(String.Format("{0,-12}", _RightHand));
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(String.Format("{0,-12}", "Shield: "));
+            Console.Write(String.Format("{0,-12}", "Etc: "));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(String.Format("{0,-12}", _Shield));
+            Console.WriteLine(String.Format("{0,-12}", _Etc));
             Console.WriteLine("--------------------------------------------------------------");
             Console.ResetColor();
             Console.WriteLine();
